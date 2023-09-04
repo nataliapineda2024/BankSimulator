@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <title>Simulador de Banco</title>
+</head>
+<body>
+    <div class="container mx-auto mt-4">
+        <h1 class="text-2xl font-semibold mb-4">Simulador de Banco</h1>
+        <div class="flex space-x-4">
+            <div class="w-1/3">
+                <h2 class="text-xl font-semibold">Cuenta Bancaria</h2>
+                <p>Saldo Actual: <span id="saldo">0</span></p>
+                <button id="depositar" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-2">Depositar</button>
+                <button id="retirar" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-2">Retirar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
