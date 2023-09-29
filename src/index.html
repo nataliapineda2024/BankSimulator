@@ -4,20 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link href="dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.js">
     <title>Simulador de Banco</title>
+
+    <style>
+        #historial+{
+            display: none;
+        }
+    </style>
+
 </head>
 <body>
+
+    
     <div class="container mx-auto mt-4">
-        <h1 class="text-2xl font-semibold mb-4">Simulador de Banco</h1>
+        <h1 class="text-2xl font-semibold mb-4" style="text-align:center;">Banck Simulator</h1>
+
         <div class="flex space-x-4">
-            <div class="w-1/3">
-                <h2 class="text-xl font-semibold">Cuenta Bancaria</h2>
-                <p>Saldo Actual: <span id="saldo">0</span></p>
-                <button id="depositar" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-2">Depositar</button>
-                <button id="retirar" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-2">Retirar</button>
-            </div>
+            <div class="w-4/6">
+
+                <h1>Welcome</h1>
+                <br>
+                <br>
+    
+                <h2 class="text-xl font-semibold">Bank account</h2>
+                 
+                <p>Your balance is:  </p> <p id="saldo">0.00</p>
+                <button id="depositar" onclick= "suma()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-2">Deposit</button>
+                <button id="retirar" onclick= "retirar()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-2">Withdraw</button>
+                <button id="depositarhistorial" onclick= "motrarabono()" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Deposit history</button>
+                <button id="retirar historial" onclick= "" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Withdraw history</button>
+            </div> 
         </div>
+    
+        <br>
+        <br>
+        <h1 id="titulo" class="text-white">Banco</h1>
+        <br>
+        <br>
+
+        <div>
+            <button onclick="logout()" class="bg-gray-500 hover:bg-blue-600 text-white px-4 py-2 mt-2">Log out</button>
+        </div>
+
     </div>
+   
+
+    <!--<div id="historial+">
+        <button id="boton" onclick="ocultar()" >Ocultar historial</button>
+        <h1>Ayuda</h1>
+    </div>
+
+    <script>
+        function mostrar(){
+            document.getElementById('historial+').style.display = 'block';
+        }
+
+        function ocultar(){
+            document.getElementById('historial+').style.display = "none";
+        }
+    </script>-->
+
+    <p id="parrafo"></p>
+
+
 
     <script src="main.js"></script>
 </body>

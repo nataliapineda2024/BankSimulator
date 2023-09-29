@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="entrada.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="input.css">
+    <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+   
+    <body class="bg-gray-200 flex items-center justify-center min-h-screen">
+        <h1>Welcome to the Banck Simulator</h1>
+     
+
+        <div class="bg-white p-8 rounded shadow-md">
+
+            <form id="loginForm">
+                <div class="mb-4">
+                    <label class="block text-gray-600 text-sm font-semibold mb-2" for="name">Name</label>
+                    <input class="w-full p-2 border rounded" type="text" id="name" name="username" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-600 text-sm font-semibold mb-2" for="username">User name</label>
+                    <input class="w-full p-2 border rounded" type="text" id="username" name="username" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-600 text-sm font-semibold mb-2" for="password">Password</label>
+                    <input class="w-full p-2 border rounded" type="password" id="password" name="password" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-600 text-sm font-semibold mb-2" for="password">DUI</label>
+                    <input class="w-full p-2 border rounded" type="password" id="password" name="password" required>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-600 text-sm font-semibold mb-2" for="password">Bank account number</label>
+                    <input class="w-full p-2 border rounded" type="password" id="password" name="password" required>
+                </div>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded w-full" onclick="login()"  type="submit">Login</button>
+            </form>
+
+            <p class="text-gray-600 mt-4">You don't have an account? <a href="#">Register here</a></p>
+        </div>
+    
+
+        <script src="entrada.js"></script>
+    </body>
+
+</html>
+
+
+
+
+
+
+
