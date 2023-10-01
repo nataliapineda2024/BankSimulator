@@ -6,13 +6,15 @@ class BanckAccount extends User {
       deposit,
       withdraw,
       numberAccount,
-      history = [] }
+      history = [],
+      historyw = [] }
       = props;
     this.balance = balance;
     this.deposit = deposit;
     this.withdraw = withdraw;
     this.numberAccount = numberAccount;
     this.history = history;
+    this.historyw = historyw;
   }
 }
 
@@ -34,7 +36,8 @@ class BanckAccount extends User {
     userAccount.dui = user.dui;
     userAccount.balance = 0;
     userAccount.deposit = "20";
-    userAccount.numberAccount = '123123123123';
+    userAccount.withdraw = "20";
+    userAccount.numberAccount = '123123';
     console.log(userAccount)
     
   };

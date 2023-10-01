@@ -9,6 +9,6 @@ function withdraw(){
       Amount: money,
       Date: new Date(),
     }
-    userAccount.history.push(transaction);
+    userAccount.historyw.push(transaction);
   };
   

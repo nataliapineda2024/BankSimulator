@@ -3,7 +3,7 @@ function showHistory(){
    
 
      userAccount.history.map(history => {
-        document.write("$ " , history.Amount, "<br>");
+        document.write("+ " , "$ " , history.Amount, "<br>");
         document.write(history.payer, "<br>");
         document.write(history.NumberAccount, "<br>");
         document.write("$ " , history.balance, "<br>");
