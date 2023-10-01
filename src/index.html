@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link href="dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="main.js">
+    <link rel="stylesheet" href="entrada.html">
     <title>Simulador de Banco</title>
 
-    <style>
-        #historial+{
-            display: none;
-        }
-    </style>
+
 
 </head>
 <body>
@@ -26,21 +22,22 @@
 
                 <h1>Welcome</h1>
                 <br>
+                <!--Bórrame si no funciono-->
+                <p id="hitorialTemporal"></p>
                 <br>
     
                 <h2 class="text-xl font-semibold">Bank account</h2>
                  
                 <p>Your balance is:  </p> <p id="saldo">0.00</p>
-                <button id="depositar" onclick= "suma()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-2">Deposit</button>
-                <button id="retirar" onclick= "retirar()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-2">Withdraw</button>
-                <button id="depositarhistorial" onclick= "motrarabono()" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Deposit history</button>
+                <button id="depositar" onclick= "deposit()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-2">Deposit</button>
+                <button id="retirar" onclick= "withdraw()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-2">Withdraw</button>
+                <button id="depositarhistorial" onclick= "showHistory()" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Deposit history</button>
                 <button id="retirar historial" onclick= "" class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Withdraw history</button>
             </div> 
         </div>
     
         <br>
         <br>
-        <h1 id="titulo" class="text-white">Banco</h1>
         <br>
         <br>
 
@@ -51,25 +48,16 @@
     </div>
    
 
-    <!--<div id="historial+">
-        <button id="boton" onclick="ocultar()" >Ocultar historial</button>
-        <h1>Ayuda</h1>
-    </div>
-
-    <script>
-        function mostrar(){
-            document.getElementById('historial+').style.display = 'block';
-        }
-
-        function ocultar(){
-            document.getElementById('historial+').style.display = "none";
-        }
-    </script>-->
-
     <p id="parrafo"></p>
 
 
 
-    <script src="main.js"></script>
+    <script src="user.js"></script>
+    <script src="deposit.js"></script>
+    <script src="backAccount.js"></script>
+    <script src="history.js"></script>
+    <script src="deposit.js"></script>
+    <script src="withdraw.js"></script>
+    
 </body>
 </html>
