@@ -16,24 +16,28 @@ class BanckAccount extends User {
   }
 }
 
-let userAccount = function createUA (){
-  let userAccount = new BanckAccount({
-    name: user.name, 
-    userName: user.userName,
-    password: user.password,
-    DUI: user.DUI, 
-    balance: 0,
-    deposit: "20",
-    numberAccount: 111000
+  let userAccount = new BanckAccount({});
+  document.addEventListener('DOMContentLoaded' , function() {
+    let userJson = localStorage.getItem('user');
+
+    if (userJson) {
+      let user = JSON.parse(userJson);
+      userAc(user);
+    }else {
+      console.log('NO HAY DATOS');
+    }
   });
-  
-  return userAccount;
-
-}
-
-
- 
-
+  function userAc(user){
+    userAccount.name = user.name;
+    userAccount.userName = user.userName;
+    userAccount.password = user.password;
+    userAccount.dui = user.dui;
+    userAccount.balance = 0;
+    userAccount.deposit = "20";
+    userAccount.numberAccount = '123123123123';
+    console.log(userAccount)
+    
+  };
 
 function logout(){
   var salir = confirm("¿Seguro que quieres cerrar sesión? ");

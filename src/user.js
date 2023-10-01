@@ -3,34 +3,28 @@ class User {
     name,
     userName,
     password,
-    DUI
+    dui
   }) {
     this.name = name;
     this.userName = userName;
     this.password = password;
-    this.DUI = DUI;
+    this.dui = dui;
   }
 }
 
+let user = new User({});
 
-function login(){
-  
-let namedata = document.getElementById("Name").value;
-let userNamedata = document.getElementById("username").value;
-let passworddata = document.getElementById("password").value;
-let DUIdata = document.getElementById("DUI").value;
+function login(event){
+  event.preventDefault()
+user.name= document.getElementById("inputName").value;
+user.userName = document.getElementById("inputUserName").value;
+user.password = document.getElementById("inputPassword").value;
+user.dui= document.getElementById("inputDUI").value;
 
-let user = new User({
-  name: namedata,
-  userName: userNamedata,
-  password: passworddata,
-  DUI: DUIdata, 
-});
-
-console.log(user);
-location = "index.html"
+localStorage.setItem('user', JSON.stringify(user));
+location.href = `index.html`
 };
 
-
+ 
  
 

@@ -19,30 +19,30 @@
             <form id="loginForm">
                 <div class="mb-4">
                     <label class="block text--600 text-sm font-semibold mb-2" for="name">Name</label>
-                    <input class="w-full p-2 border rounded" type="text" id="Name" name="username" required>
+                    <input class="w-full p-2 border rounded" type="text" id="inputName" name="username" required>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-gray-600 text-sm font-semibold mb-2" for="username">User name</label>
-                    <input class="w-full p-2 border rounded" type="text" id="username" name="username" required>
+                    <input class="w-full p-2 border rounded" type="text" id="inputUserName" name="username" required>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-gray-600 text-sm font-semibold mb-2" for="password">Password</label>
-                    <input class="w-full p-2 border rounded" type="password" id="password" name="password" required>
+                    <input class="w-full p-2 border rounded" type="password" id="inputPassword" name="password" required>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-gray-600 text-sm font-semibold mb-2" for="password">DUI</label>
-                    <input class="w-full p-2 border rounded" type="password" id="DUI" name="password" required>
+                    <input class="w-full p-2 border rounded" type="password" id="inputDUI" name="password" required>
                 </div>
 
                 <div class="mb-4">
                     <label class="block text-gray-600 text-sm font-semibold mb-2" for="password">Bank account number</label>
-                    <input class="w-full p-2 border rounded" type="password" id="password" name="password" required>
+                    <input class="w-full p-2 border rounded" type="password" id="inputNAccount" name="password" required>
                 </div>
 
-                <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded w-full" onclick="login()"  type="submit">Login</button>
+                <button class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded w-full" onclick="login(event)" >Login</button>
             </form>
 
             <p class="text-gray-600 mt-4">You don't have an account? <a href="#">Register here</a></p>
@@ -50,6 +50,7 @@
     
         
         <script src="user.js"></script>
+        <script src="deposit.js"></script>
         <script src="backAccount.js"></script>
         <script src="history.js"></script>
         <script src="deposit.js"></script>
