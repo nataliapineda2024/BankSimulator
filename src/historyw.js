@@ -1,6 +1,5 @@
 function showHistoryw(){
     console.log(userAccount.historyw);
-   
 
      userAccount.historyw.map(historyw => {
         document.write("- ","$ " , historyw.Amount, "<br>");
