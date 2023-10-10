@@ -1,11 +1,12 @@
 function deposit(){
 
-  const money = parseFloat(prompt("Cuanto desea abonar?"));
+  const money = parseFloat(prompt("How much do you want to deposit?"));
   if(money > 0){
-  let elementoDondeMostrar = document.getElementById("saldo"); 
+  let elementoDondeMostrar = document.getElementById("saldo");; 
   elementoDondeMostrar.innerHTML  = userAccount.balance += money;
+  localStorage.setItem("Balance", money)
  }else{
-  alert("La cantidad ingresada debe ser mayor que 0");
+  alert("The amount entered must be greater than 0");
  }
 
   const transaction = {
@@ -16,10 +17,27 @@ function deposit(){
     Date: new Date(),
   }
   userAccount.history.push(transaction);
-
-  localStorage.setItem('userAccount', JSON.stringify(userAccount));
-  
+ 
 };
 
-const userAccountJSON = localStorage.getItem('userAccount');
-const userAccountFromStorage = JSON.parse(userAccountJSON);
+
+
+function guardar() {
+  const dato = document.getElementById('saldo').value;
+  localStorage.setItem('miDato', dato);
+  mostrarDatoGuardado();
+
+}
+
+
+
+function mostrarDatoGuardado() {
+  const datoGuardado = localStorage.getItem('miDato');
+  if (datoGuardado) {
+      document.getElementById('datoGuardado').textContent = 'Dato guardado: ' + datoGuardado;
+  } else {
+      document.getElementById('datoGuardado').textContent = 'No hay dato guardado.';
+  }
+}
+
+mostrarDatoGuardado();

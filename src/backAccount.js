@@ -43,7 +43,7 @@ class BanckAccount extends User {
   };
 
 function logout(){
-  var salir = confirm("¿Seguro que quieres cerrar sesión? ");
+  var salir = confirm("Are you sure you want to log out?");
     if(salir == true){
         location = "entrada.html";
     }else{

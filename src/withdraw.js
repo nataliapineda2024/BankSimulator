@@ -1,11 +1,11 @@
 function withdraw(){
 
-  const money = parseFloat(prompt("Cuanto desea retirar?"));
+  const money = parseFloat(prompt("How much do you want to withdraw?"));
   if(money > 0){
   let elementoDondeMostrar = document.getElementById("saldo"); 
   elementoDondeMostrar.innerHTML  = userAccount.balance -= money; 
  }else{
-  alert("La cantidad ingresada debe ser mayor que 0");
+  alert("The amount entered must be greater than 0");
  }
     
     const transaction = {
