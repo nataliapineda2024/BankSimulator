@@ -1,4 +1,5 @@
 function showHistoryw(){
+    location = "showHistory.html";
     console.log(userAccount.historyw);
 
      userAccount.historyw.map(historyw => {

@@ -4,7 +4,7 @@ function deposit(){
   if(money > 0){
   let elementoDondeMostrar = document.getElementById("saldo");; 
   elementoDondeMostrar.innerHTML  = userAccount.balance += money;
-  localStorage.setItem("Balance", money)
+  localStorage.setItem(money , "money");
  }else{
   alert("The amount entered must be greater than 0");
  }
@@ -17,27 +17,12 @@ function deposit(){
     Date: new Date(),
   }
   userAccount.history.push(transaction);
- 
+
+  var savedMoney = localStorage.getItem('money');
+  console.log(savedMoney)
 };
 
 
 
-function guardar() {
-  const dato = document.getElementById('saldo').value;
-  localStorage.setItem('miDato', dato);
-  mostrarDatoGuardado();
-
-}
 
 
-
-function mostrarDatoGuardado() {
-  const datoGuardado = localStorage.getItem('miDato');
-  if (datoGuardado) {
-      document.getElementById('datoGuardado').textContent = 'Dato guardado: ' + datoGuardado;
-  } else {
-      document.getElementById('datoGuardado').textContent = 'No hay dato guardado.';
-  }
-}
-
-mostrarDatoGuardado();
