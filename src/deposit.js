@@ -1,13 +1,26 @@
-function deposit(){
+elementoDondeMostrar = document.getElementById("saldo");
+var savedMoney = localStorage.getItem('total');
+if (savedMoney) {
+  elementoDondeMostrar.innerHTML = savedMoney;
+}
 
-  const money = parseFloat(prompt("How much do you want to deposit?"));
-  if(money > 0){
-  let elementoDondeMostrar = document.getElementById("saldo");; 
-  elementoDondeMostrar.innerHTML  = userAccount.balance += money;
-  localStorage.setItem(money , "money");
- }else{
-  alert("The amount entered must be greater than 0");
- }
+function deposit() {
+  var money = parseFloat(prompt("How much do you want to deposit?"));
+  if (money > 0) {
+
+    if (savedMoney) {
+      userAccount.balance = parseFloat(savedMoney);
+    }
+
+    userAccount.balance = userAccount.balance + money;
+    localStorage.setItem('total', userAccount.balance);
+
+    savedMoney = localStorage.getItem('total');
+    elementoDondeMostrar.innerHTML = savedMoney;
+
+  } else {
+    alert("The amount entered must be greater than 0");
+  }
 
   const transaction = {
     payer: userAccount.name,
@@ -16,11 +29,20 @@ function deposit(){
     Amount: money,
     Date: new Date(),
   }
-  userAccount.history.push(transaction);
 
-  var savedMoney = localStorage.getItem('money');
-  console.log(savedMoney)
+  let newHistory = JSON.parse(localStorage.getItem('historial')) || [];
+  newHistory.push(transaction);
+  localStorage.setItem('historial', JSON.stringify(newHistory));
+
+
+
+  userAccount.history = JSON.parse(localStorage.getItem('historial'));
+  console.log(userAccount.history);
+
 };
+
+
+
 
 
 
