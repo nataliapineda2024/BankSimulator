@@ -30,16 +30,16 @@ function deposit() {
     Date: new Date(),
   }
 
-  let newHistory = JSON.parse(localStorage.getItem('historial')) || [];
+  let newHistory = JSON.parse(localStorage.getItem('historialD')) || [];
   newHistory.push(transaction);
-  localStorage.setItem('historial', JSON.stringify(newHistory));
+  localStorage.setItem('historialD', JSON.stringify(newHistory));
 
-
-
-  userAccount.history = JSON.parse(localStorage.getItem('historial'));
+  userAccount.history = JSON.parse(localStorage.getItem('historialD'));
   console.log(userAccount.history);
 
 };
+
+
 
 
 

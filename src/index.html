@@ -6,38 +6,39 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
     <link href="../dist/output.css" rel="stylesheet">
     <link rel="stylesheet" href="entrada.html">
+    <link rel="stylesheet" href="input.css">
     <title>Simulador de Banco</title>
-    <style>
-        #show{
-        display: none
-    }
-    </style>
 
 </head>
-<body class="bg-purple-200">
+<body class="bg-purple-100">
 
     
     <div class="container mx-auto mt-4">
-        <h1 class="text-2xl font-semibold mb-4" style="text-align:center;">Banck Simulator</h1>
 
-        <div class="flex space-x-4">
-            <div class="w-4/6">
-
-                <h1>Welcome <script> name</script></h1>
+        <div class="bg-yellow-400 h-16 ">
+        <h1 class="text-5xl font-semibold mb-4 text-blue-800 p-2" style="text-align:center;">Banck Simulator</h1>
+        </div>
                 <br>
-                <!--Bórrame si no funciono-->
-                <p id="hitorialTemporal"></p>
+                <br>
+
+                <h1 class="text-2xl text-white font-semibold" id="saludo">Welcome</h1>
+                <br>
                 <br>
     
-                <h2 class="text-xl font-semibold">Bank account</h2>
+                <h2 class="text-2xl font-semibold text-white">Bank account</h2>
                 
-        
-                <p>Your balance is:  </p> <p id="saldo">0.00</p>
-                <button id="depositar" onclick= "deposit()" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 mt-2">Deposit</button>
-                <button id="retirar" onclick= "withdraw()" class="bg-red-500 hover:bg-red-600 text-white px-4 py-2 mt-2">Withdraw</button>
-                <button id="depositarhistorial" onclick= "showHistory()", class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Deposit history</button>
-                <button id="retirar historial" onclick= "showHistoryw()", class="bg-blue-600 hover:bg-blue-800 text-white px-4 py-2 mt-2">Withdraw history</button>
-            </div> 
+                <div class="bg-yellow-400 w-44">
+                <p style="text-align:center;">Your balance is:  </p> <p id="saldo" style="text-align:center;">0.00</p>
+                </div>
+
+                <div class="flex justify-evenly py-8">
+                  
+                <button id="depositar" onclick= "deposit()" class="bg-blue-800 hover:bg-blue-900 text-white px-12 py-2 mt-2 border-2 border-yellow-500 rounded-xl"> Deposit </button>
+                <button id="retirar" onclick= "withdraw()" class="bg-blue-800 hover:bg-blue-900 text-white px-12 py-2 mt-2 border-2 border-yellow-500 rounded-xl">Withdraw</button>
+                <button id="retirar historial" onclick= "gato()", class="bg-blue-800 hover:bg-blue-900 text-white px-4 py-2 mt-2 border-2 border-yellow-500 rounded-xl">Widthdraw history</button>
+                <button id="depositarhistorial" onclick= "geto()", class="bg-blue-800 hover:bg-blue-900 text-white  px-6 py-2 mt-2 border-2 border-yellow-500 rounded-xl">Deposit history</button>
+            
+                </div>
         </div>
     
         <br>
@@ -45,14 +46,11 @@
         <br>
         <br>
 
-        <div>
-            <button onclick="logout()" class="bg-gray-500 hover:bg-blue-600 text-white px-4 py-2 mt-2">Log out</button>
+        <div class="flex justify-center">
+            <button onclick="logout()" class="bg-blue-600 hover:bg-blue-800 text-black px-4 py-2 mt-2 border-2 border-yellow-400 rounded-xl">Log out</button>
         </div>
-
     </div>
    
-
-
     <script src="user.js"></script>
     <script src="deposit.js"></script>
     <script src="backAccount.js"></script>

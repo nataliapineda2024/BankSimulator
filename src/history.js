@@ -1,37 +1,40 @@
-function showHistory(){
+function geto() {
     window.location = "showHistory.html";
-    userAccount.history = JSON.parse(localStorage.getItem('historial'));
-  
-    console.log(userAccount.history);
+}
+ 
+showHistory();
 
-    userAccount.history.map(history => {
+
+function showHistory() {
+    let history = JSON.parse(localStorage.getItem('historialD'));
+
+    console.log(history);
+
+    history.map(history => {
         const showbonus = document.createElement("p");
-        showbonus.innerText = "+ " , "$ " , history.Amount, "<br>";
+        showbonus.innerText ="+ " + "$"  + history.Amount;
         document.getElementById("SHOWhistory").appendChild(showbonus);
 
         const showpayer = document.createElement("p");
-        showpayer.innerText = history.payer, "<br>";
+        showpayer.innerText = history.payer;
         document.getElementById("SHOWhistory").appendChild(showpayer);
 
         const showNumAccount = document.createElement("p");
-        showNumAccount.innerText = history.NumberAccount, "<br>";
+        showNumAccount.innerText = history.NumberAccount;
         document.getElementById("SHOWhistory").appendChild(showNumAccount);
 
-        const showbalance = document.createElement("p"); 
-        showbalance.innerText = "$ " , history.balance, "<br>";
+        const showbalance = document.createElement("p");
+        showbalance.innerText = "$" + history.balance;
         document.getElementById("SHOWhistory").appendChild(showbalance);
 
         const showdate = document.createElement("p");
-        showdate.innerText = history.Date, "<br>";
+        showdate.innerText = history.Date;
         document.getElementById("SHOWhistory").appendChild(showdate);
-        
+
         const showline = document.createElement("p");
-        showline.innerText = "<br>" , "--------------------------------------------", "<br>";
+        showline.innerText = "--------------------------------------------";
         document.getElementById("SHOWhistory").appendChild(showline);
     })
-
 }
 
-function back(){
-    window.location = "index.html";
-}
+

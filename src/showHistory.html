@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fondos.css">
+    <style>
+        .btn-float {
+            position: fixed;
+            bottom: 20px;
+            right: 600px;
+        }
+    </style>
 </head>
 <body>
-    <h1> Deposit History</h1>
-    <div id="SHOWhistory"></div>
+    <h1 class="text-5xl text-blue-800 py-4 px-10"> Deposit History</h1>
+
+    <div class="container">
+        <div class="btn-float">
+        <button onclick="back()" class="bg-blue-600 hover:bg-blue-700 text-black px-10 py-2 mt-2 border-2 border-yellow-400 rounded-xl">Back</button>
+        </div>
+    </div>
+
+    <div id="SHOWhistory" class="px-10"></div>
     <br>
     <br>
     <br>
     <br>
 
-    <button onclick="back()">Back</button>
+
 
 
 <script src="user.js"></script>
@@ -23,5 +39,6 @@
 <script src="deposit.js"></script>
 <script src="withdraw.js"></script>
 <script src="historyw.js"></script>
+
 </body>
 </html>
