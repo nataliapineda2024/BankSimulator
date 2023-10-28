@@ -1,12 +1,16 @@
+
+let userAcount = new BanckAccount ({});
+
+
 //Función del login
 function login(event) {
     event.preventDefault(); 
 
-    var inputName = document.getElementById("inputName");
-    var inputUserName = document.getElementById("inputUserName");
-    var inputPassword = document.getElementById("inputPassword");
-    var inputDUI = document.getElementById("inputDUI");
-    var inputNAccount = document.getElementById("inputNAccount");
+    userAcount.name = document.getElementById("inputName").value;
+    userAcount.userName = document.getElementById("inputUserName").value;
+    userAcount.password = document.getElementById("inputPassword").value;
+    userAcount.dui = document.getElementById("inputDUI").value;
+    userAcount.numberAccount = document.getElementById("inputNAccount").value;
 
     if (
         inputName.value === "" ||
@@ -22,36 +26,8 @@ function login(event) {
 }
 
 function validateAndLogin() {
+    localStorage.setItem('user', JSON.stringify(userAcount));
     alert("Successful Login!");
     window.location = "index.html"
 }
 
-
-
-//Función para crear una cuenta
-function loginC(event) {
-    event.preventDefault(); 
-
-    var inputName = document.getElementById("inputName");
-    var inputUserName = document.getElementById("inputUserName");
-    var inputPassword = document.getElementById("inputPassword");
-    var inputDUI = document.getElementById("inputDUI");
-    var inputNAccount = document.getElementById("inputNAccount");
-
-    if (
-        inputName.value === "" ||
-        inputUserName.value === "" ||
-        inputPassword.value === "" ||
-        inputDUI.value === "" ||
-        inputNAccount.value === ""
-    ) {
-        alert("Please, fill in all fields");
-    } else {
-        validateAndLoginC();
-    }
-}
-
-function validateAndLoginC() {
-    alert("You've successfully created your account!");
-    window.location = "index.html"
-}
